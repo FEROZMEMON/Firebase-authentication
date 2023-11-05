@@ -6,10 +6,11 @@ const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 
 
-
-form.addEventListener("submit", (event) => {
+  
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-
+    
+    
     signInWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => { 
       const user = userCredential.user;
@@ -21,6 +22,6 @@ form.addEventListener("submit", (event) => {
       const errorMessage = error.message;
       console.log(errorMessage);
     });
-
-
-})
+    
+    
+  })
