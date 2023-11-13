@@ -17,10 +17,14 @@ const password = document.querySelector("#password")
       console.log(user);
       window.location = "home.html"
     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorMessage);
+    .catch((error) => { 
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="register.html">Do you have an account?</a>'
+      });
     });
     
     
